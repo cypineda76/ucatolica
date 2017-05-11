@@ -1,0 +1,405 @@
+.mensaje{
+color:#FF0000
+}
+.titulo1{
+font-size:14px;
+font-style:oblique;
+color:#666666;
+font-weight: bold;
+}
+.texto2{
+font-size:11px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+.textooblig{
+font-size:12px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+color:#FF0000;
+}
+.inputext{
+border: 1px solid #B1B1B1;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+background-color: #fff;
+text-transform: uppercase;
+padding: 1px;
+color: #000000;
+-webkit-border-radius: 5;
+-moz-border-radius: 5;
+border-radius: 5px;
+height:18px;
+font-size:11px;
+}
+
+.textAreaTm{
+border: 1px solid #B1B1B1;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+background-color: #fff;
+text-transform: uppercase;
+padding: 1px;
+color: #000000;
+-webkit-border-radius: 5;
+-moz-border-radius: 5;
+border-radius: 5px;
+height:70px;
+width:300px;
+font-size:11px;
+}
+
+.inputextBloq{
+border: 1px solid #B1B1B1;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+background-color: #E9E9E9;
+text-transform: uppercase;
+padding: 1px;
+color: #000000;
+-webkit-border-radius: 5;
+-moz-border-radius: 5;
+border-radius: 5px;
+height:18px;
+font-size:11px;
+}
+
+.inputextBloqCenter{
+border: 1px solid #B1B1B1;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+background-color: #E9E9E9;
+text-transform: uppercase;
+padding: 1px;
+color: #000000;
+-webkit-border-radius: 5;
+-moz-border-radius: 5;
+border-radius: 5px;
+height:18px;
+font-size:11px;
+text-align:center;
+}
+
+.inputextBlock{ /*Css input['text'] bloqueado*/
+border: 1px solid #dadada;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+background-color: #ECF1EF;
+text-transform: uppercase;
+padding: 1px;
+color: #000000;
+-webkit-border-radius: 5;
+-moz-border-radius: 5;
+border-radius: 5px;
+height:18px;
+font-size:11px;
+}
+
+.inputext1{
+border: 1px solid #dadada;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+background-color: #fff;
+text-transform: uppercase;
+padding: 2px;
+color: #000000;
+-webkit-border-radius: 6;
+-moz-border-radius: 6;
+border-radius: 6px;
+height:20px;
+font-size:11px;
+}
+.selecttext{
+font-size:11px;
+background-color:#fff;
+color:#000;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+width:120px;
+height:20px;
+-webkit-border-radius: 6;
+-moz-border-radius: 6;
+border-radius: 6px;
+overflow:auto;
+}
+
+.selecttext2{
+font-size:11px;
+background-color:#fff;
+color:#000;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+width:200px;
+height:20px;
+-webkit-border-radius: 6;
+-moz-border-radius: 6;
+border-radius: 6px;
+overflow:auto;
+}
+
+@media (max-width: 768px) {
+.selecttext2{
+font-size:11px;
+background-color:#fff;
+color:#000;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+width:100%;
+height:20px;
+-webkit-border-radius: 6;
+-moz-border-radius: 6;
+border-radius: 6px;
+overflow:auto;
+}
+}
+
+.selecttext3{
+font-size:11px;
+background-color:#fff;
+color:#000;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+width:100px;
+height:25px;
+-webkit-border-radius: 6;
+-moz-border-radius: 6;
+border-radius: 6px;
+overflow:auto;
+}
+
+.Estilo7 {
+	color: #FF0000;
+	font-style: italic;
+	font-size:14px;
+}
+
+.selecttext4{
+font-size:11px;
+background-color:#fff;
+color:#000;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+width:100px;
+height:25px;
+-webkit-border-radius: 6;
+-moz-border-radius: 6;
+border-radius: 6px;
+overflow:auto;
+}
+
+.selecttext5{
+font-size:11px;
+background-color:#fff;
+color:#000;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+width:50px;
+height:25px;
+-webkit-border-radius: 6;
+-moz-border-radius: 6;
+border-radius: 6px;
+overflow:auto;
+}
+
+.selecttext6{
+font-size:11px;
+background-color:#fff;
+color:#000;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+width:300px;
+height:20px;
+-webkit-border-radius: 6;
+-moz-border-radius: 6;
+border-radius: 6px;
+overflow:auto;
+}
+
+.selecttextmult{
+font-size:11px;
+background-color:#fff;
+color:#000;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+width:150px;
+-webkit-border-radius: 6;
+-moz-border-radius: 6;
+border-radius: 6px;
+}
+.inputMultip{
+border: 1px solid #dadada;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+background-color: #fff;
+text-transform: uppercase;
+padding: 2px;
+color: #000000;
+-webkit-border-radius: 6;
+-moz-border-radius: 6;
+border-radius: 6px;
+font-size:11px;
+}
+.botonlogin {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #3333CC;
+	border: 3;
+	border-color: #CCCCCC;
+	outline-color: #999999;
+	outline-width: 5px;
+	height:30px;
+}
+.tablaborde {
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 0;
+	border-left-width: 0;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #B5C6D8;
+	border-right-color: #FFFFFF;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #B5C6D8;
+}
+.tablaborde1 {
+	border-top-width: 1;
+	border-right-width: 1;
+	border-bottom-width: 1;
+	border-left-width: 1;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #B5C6D8;
+	border-right-color: #FFFFFF;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #B5C6D8;
+}
+.hint {
+     color: grey;
+}
+.x-grid3-header{
+	border:1px solid #bfcfd4;
+	border-width:1px 0;
+	color:#000;
+	font-size:.9em;
+	font-weight:bold;
+	padding:0;
+	width:22px;
+	height:20px;
+	background-position:20px 20px; 
+	vertical-align:bottom;
+}
+
+.CSS_Table_Example {
+	margin:0px;padding:0px;
+	-moz-border-radius-bottomleft:2px;
+	-webkit-border-bottom-left-radius:2px;
+	border-bottom-left-radius:2px;
+	-moz-border-radius-bottomright:2px;
+	-webkit-border-bottom-right-radius:2px;
+	border-bottom-right-radius:2px;
+	-moz-border-radius-topright:2px;
+	-webkit-border-top-right-radius:2px;
+	border-top-right-radius:2px;
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-left-radius:2px;
+}
+
+.CSS_Table_Example tr:hover td{
+	background-color:#6CA6CD;
+}
+.CSS_Table_Example tr:first-child td{
+	background-color:#B0C4DE;
+	text-align:center;
+	font-family: "Swis721CnBTRoman";
+	font-size: 12px;
+	font-weight: bold;
+	opacity:0.85;
+	-moz-opacity:0.85;
+	-khtml-opacity:0.85;
+	filter:alpha(opacity=85);
+	color:#000000;
+	text-transform: uppercase;
+}
+.CSS_Table_Example td{
+	background-color:#DCE6F2;
+	font-size:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;
+}
+
+/*#############*/
+.CSS_Table1 {
+	margin:0px;padding:0px;
+	-moz-border-radius-bottomleft:2px;
+	-webkit-border-bottom-left-radius:2px;
+	border-bottom-left-radius:2px;
+	-moz-border-radius-bottomright:2px;
+	-webkit-border-bottom-right-radius:2px;
+	border-bottom-right-radius:2px;
+	-moz-border-radius-topright:2px;
+	-webkit-border-top-right-radius:2px;
+	border-top-right-radius:2px;
+	-moz-border-radius-topleft:2px;
+	-webkit-border-top-left-radius:2px;
+	border-top-left-radius:2px;
+}
+
+.CSS_Table1 tr:hover td{
+	background-color:#6CA6CD;
+}
+.CSS_Table1 tr:first-child td{
+	background-color:#B0C4DE;
+	text-align:center;
+	font-family: "Swis721CnBTRoman";
+	font-size: 12px;
+	font-weight: bold;
+	opacity:0.85;
+	-moz-opacity:0.85;
+	-khtml-opacity:0.85;
+	filter:alpha(opacity=85);
+	color:#000000;
+	text-transform: uppercase;
+}
+.CSS_Table1 td{
+	/*background-color:#DCE6F2;*/
+	font-size:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#000000;
+}
+.celdasTitulo{
+	background-color:#B0C4DE;
+	text-align:center;
+	font-family: "Swis721CnBTRoman";
+	font-size: 12px;
+	font-weight: bold;
+	opacity:0.85;
+	-moz-opacity:0.85;
+	-khtml-opacity:0.85;
+	filter:alpha(opacity=85);
+	color:#000000;
+	text-transform: uppercase;
+}
+
+.estiloTHTitulo{
+	background-color:#B0C4DE;
+	text-align:center;
+	font-family: "Swis721CnBTRoman";
+	font-size: 12px;
+	font-weight: bold;
+	opacity:0.85;
+	-moz-opacity:0.85;
+	-khtml-opacity:0.85;
+	filter:alpha(opacity=85);
+	color:#000000;
+	text-transform: uppercase;
+}
+
+.TituloTabla{
+	background-color:#6CA6CD;
+	text-transform: uppercase;
+	font-size:12px;
+	text-align:center;
+}
+
+.FilaTabla{
+	background-color:#c2cedf;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.FooterTabla{
+	background-color:#c2cedf;
+	font-weight: bold;
+}

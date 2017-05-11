@@ -1,0 +1,153 @@
+@charset "utf-8";
+/*@media screen and (max-width:980px){*/
+	#fondo{
+		position:fixed;
+		width:100%;
+		height:100%;
+		z-index:-20;
+	}
+	#header { 
+		height: 88px; 
+		width: 100%; 
+		background-image: url('../img/cabecera.png'); 
+		background-repeat:no-repeat;
+		background-position:center;
+		position: relative;
+	}
+	#bienvenido{
+		background-image:url(../img/bienvenido.png);
+		width:309px;
+		height:35px;
+		color:#002F67;
+		margin-top:-25px;
+		font-size:11px;
+		line-height:35px;
+		padding-left:32px;
+	}
+	#contenedor{
+		alignment-adjust:central;
+		max-height:600px;
+		overflow:auto;
+		margin-top: 5px;
+	}
+	#pie{
+		background-image: url('../img/Pie.png');
+		background-repeat:no-repeat;
+		background-color:#1E4C81;
+		height:37px;
+	}
+	
+	#menu1{
+		height:560px;
+		overflow:auto;
+	}
+	#footer{
+		position:fixed;
+		left:0px;
+		bottom:0px;
+		height:37px;
+		/*height:85px;*/
+		width:100%;
+	}
+	body{
+		margin:0;
+		padding:0;
+	}
+	#bodyframe{
+		font-family: "Swis721CnBTRoman";
+		font-size: 11px;
+		opacity:0.85;
+		-moz-opacity:0.85;
+		-khtml-opacity:0.85;
+		filter:alpha(opacity=85);
+	}
+	
+	.border4{
+		-moz-border-radius: 1em;
+		-webkit-border-radius: 1em;
+		-webkit-box-shadow: rgba(0,0,0,0.4) 1px 4px;
+		-moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px;
+		box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px;
+		border-radius: 1em;
+		opacity:0.90;
+		-moz-opacity:0.90;
+		-khtml-opacity:0.90;
+		filter:alpha(opacity=90);
+	}
+	
+	@font-face {
+		font-family: "Swis721CnBTRoman";
+		src: url('swz721c-webfont.eot');
+		src: url('swz721c-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('swz721c-webfont.woff') format('woff'),
+			 url('swz721c-webfont.ttf') format('truetype'),
+			 url('swz721c-webfont.svg#Swis721CnBTRoman') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	@font-face {
+	 font-family: "Swis721 Cn BT";
+	 src: url("swz721c.eot") /* EOT file for IE */
+	}
+	
+	@font-face {
+	 font-family: "Swis721 Cn BT";
+	 src: url("swz721c.TTF") /* TTF file for CSS3 browsers */
+	}
+	
+	.logout{
+		margin-left:420px;
+		margin-top:-60px;
+		padding:inherit;	
+	}
+	
+	#wb_Shape2 a img{
+	position: absolute;
+	}
+	#wb_Shape2 span{
+	   position: absolute;
+	}
+	#wb_Shape2 a .hover{
+	   visibility: hidden;
+	}
+	#wb_Shape2 a:hover .hover{
+	   visibility: visible;
+	}
+	#wb_Shape2 a:hover span{
+	   visibility: hidden;
+	}
+	#Image1{
+	   border: 0px #000000 solid;
+	}
+	#wb_Shape1 a img{
+	   position: absolute;
+	}
+	#wb_Shape1 span{
+	   position: absolute;
+	}
+	#wb_Shape1 a .hover{
+	   visibility: hidden;
+	}
+	#wb_Shape1 a:hover .hover{
+	   visibility: visible;
+	}
+	#wb_Shape1 a:hover span{
+	   visibility: hidden;
+	}
+	#Image2{
+	   border: 0px #000000 solid;
+	}
+	#Image3{
+	   border: 0px #000000 solid;
+	}
+	#wb_Text1 {
+		background-color: transparent;
+		border: 0px #000000 solid;
+		padding: 0;
+		overflow: automatico;
+	}
+	#wb_Text1 div{
+	   text-align: center;
+	}
+/*}*/

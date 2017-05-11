@@ -1,0 +1,384 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0;
+	padding:0;
+	font-family: "Swis721CnBTRoman";
+}
+.titulo{
+	font-family: "Swis721CnBTRoman";
+	font-size:16px;
+	color:#005BAA;
+}
+.texto{
+	font-family: "Swis721CnBTRoman";
+	font-size:14px;
+	color:#4D4D4D;
+	text-align:justify;
+}
+.bodyframe{
+	font-family: "Swis721CnBTRoman";
+	opacity:0.80;
+	-moz-opacity:0.80;
+	-khtml-opacity:0.80;
+	filter:alpha(opacity=80);
+}
+	
+@font-face {
+    font-family: "Swis721CnBTRoman";
+    src: url('swz721c-webfont.eot');
+    src: url('swz721c-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721c-webfont.woff') format('woff'),
+         url('swz721c-webfont.ttf') format('truetype'),
+         url('swz721c-webfont.svg#Swis721CnBTRoman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+ font-family: "Swis721 Cn BT";
+ src: url("swz721c.eot") /* EOT file for IE */
+}
+
+@font-face {
+ font-family: "Swis721 Cn BT";
+ src: url("swz721c.TTF") /* TTF file for CSS3 browsers */
+}
+
+div#container{
+   width: 868px;
+}
+
+#background{
+	position:fixed;
+	width:100%;
+	height:100%;
+	z-index:-20;	
+}	
+
+#tablac{
+	height:100%;
+	width:100%;
+	min-height:765px;	
+}
+.pie{
+	font-family: "Swis721 Cn BT";
+	font-size:13px;
+	color:#FFF;
+	}
+a{
+   color: #C8D7EB;
+   text-decoration: underline;
+}
+a:visited{
+   color: #C8D7EB;
+}
+a:active{
+   color: #C8D7EB;
+}
+a:hover{
+   color: #376BAD;
+   text-decoration: underline;
+}
+
+#wb_Shape2 a img{
+	position: absolute;
+}
+#wb_Shape2 span{
+   position: absolute;
+}
+#wb_Shape2 a .hover{
+   visibility: hidden;
+}
+#wb_Shape2 a:hover .hover{
+   visibility: visible;
+}
+#wb_Shape2 a:hover span{
+   visibility: hidden;
+}
+#Image1{
+   border: 0px #000000 solid;
+}
+#wb_Shape1 a img{
+   position: absolute;
+}
+#wb_Shape1 span{
+   position: absolute;
+}
+#wb_Shape1 a .hover{
+   visibility: hidden;
+}
+#wb_Shape1 a:hover .hover{
+   visibility: visible;
+}
+#wb_Shape1 a:hover span{
+   visibility: hidden;
+}
+#Image2{
+   border: 0px #000000 solid;
+}
+#Image3{
+   border: 0px #000000 solid;
+}
+#wb_Text1 {
+	background-color: transparent;
+	border: 0px #000000 solid;
+	padding: 0;
+	overflow: automatico;
+}
+#wb_Text1 div{
+   text-align: center;
+}
+#NavigationBar5 ul.navbar{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+#NavigationBar5 ul.navbar li{
+   height: 150px;
+   width: 182px;
+   float: left;
+   margin: 0px 0px 0px 0px;
+}
+#NavigationBar5 ul.navbar li a{
+   display: block;
+   position: relative;
+}
+#NavigationBar5 ul.navbar li a img{
+   position: absolute;
+   z-index: 1;
+   border-width: 0px;
+}
+#NavigationBar5 ul.navbar li span{
+   display: block;
+   height: 150px;
+   width: 182px;
+   position: absolute;
+   z-index: 2;
+}
+#Image9{
+   border: 0px #000000 solid;
+}
+#NavigationBar4 ul.navbar{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+#NavigationBar4 ul.navbar li{
+   height: 53px;
+   width: 146px;
+   float: left;
+   margin: 0px 0px 0px 0px;
+}
+#NavigationBar4 ul.navbar li a{
+   display: block;
+   position: relative;
+}
+#NavigationBar4 ul.navbar li a img{
+   position: absolute;
+   z-index: 1;
+   border-width: 0px;
+}
+#NavigationBar4 ul.navbar li span{
+   display: block;
+   height: 53px;
+   width: 146px;
+   position: absolute;
+   z-index: 2;
+}
+#Image11{
+   border: 0px #000000 solid;
+}
+#NavigationBar6 ul.navbar{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+#NavigationBar6 ul.navbar li{
+   height: 53px;
+   width: 146px;
+   float: left;
+}
+#NavigationBar6 ul.navbar li a{
+	display: block;
+	position: relative;
+	background-color: #1E4C81;
+}
+#NavigationBar6 ul.navbar li a img{
+   position: absolute;
+   z-index: 1;
+   border-width: 0px;
+}
+#NavigationBar6 ul.navbar li span{
+   display: block;
+   height: 53px;
+   width: 146px;
+   position: absolute;
+   z-index: 2;
+}
+#Image8{
+   border: 0px #000000 solid;
+}
+#Image10{
+   border: 0px #000000 solid;
+}
+#NavigationBar7 ul.navbar{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+#NavigationBar7 ul.navbar li{
+   height: 53px;
+   width: 146px;
+   float: left;
+   margin: 0px 0px 0px 0px;
+}
+#NavigationBar7 ul.navbar li a{
+   display: block;
+   position: relative;
+}
+#NavigationBar7 ul.navbar li a img{
+   position: absolute;
+   z-index: 1;
+   border-width: 0px;
+}
+#NavigationBar7 ul.navbar li span{
+   display: block;
+   height: 53px;
+   width: 146px;
+   position: absolute;
+   z-index: 2;
+}
+#NavigationBar8 ul.navbar{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+#NavigationBar8 ul.navbar li{
+   height: 53px;
+   width: 146px;
+   float: left;
+   margin: 0px 0px 0px 0px;
+}
+#NavigationBar8 ul.navbar li a{
+   display: block;
+   position: relative;
+}
+#NavigationBar8 ul.navbar li a img{
+   position: absolute;
+   z-index: 1;
+   border-width: 0px;
+}
+#NavigationBar8 ul.navbar li span{
+   display: block;
+   height: 53px;
+   width: 146px;
+   position: absolute;
+   z-index: 2;
+}
+#Image12{
+   border: 0px #000000 solid;
+}
+#Image13{
+   border: 0px #000000 solid;
+}
+#NavigationBar9 ul.navbar{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+#NavigationBar9 ul.navbar li{
+   height: 53px;
+   width: 146px;
+   float: left;
+   margin: 0px 0px 0px 0px;
+}
+#NavigationBar9 ul.navbar li a{
+   display: block;
+   position: relative;
+}
+#NavigationBar9 ul.navbar li a img{
+   position: absolute;
+   z-index: 1;
+   border-width: 0px;
+}
+#NavigationBar9 ul.navbar li span{
+   display: block;
+   height: 53px;
+   width: 146px;
+   position: absolute;
+   z-index: 2;
+}
+#Image14{
+   border: 0px #000000 solid;
+}
+#wb_Text2{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+}
+#wb_Text2 div{
+   text-align: left;
+}
+#InlineFrame1{
+   border: 0px #C0C0C0 solid;
+}
+#RollOver1 a{
+   display: block;
+   position: relative;
+}
+#RollOver1 a img{
+   position: absolute;
+   z-index: 1;
+   border-width: 0px;
+}
+#RollOver1 span{
+   display: block;
+   height: 20px;
+   width: 92px;
+   position: absolute;
+   z-index: 2;
+}
+#RollOver1 a .hover{
+   visibility: hidden;
+}
+#RollOver1 a:hover .hover{
+   visibility: visible;
+}
+#RollOver1 a:hover span{
+   visibility: hidden;
+}
+#RollOver2 a{
+   display: block;
+   position: relative;
+}
+#RollOver2 a img{
+   position: absolute;
+   z-index: 1;
+   border-width: 0px;
+}
+#RollOver2 span{
+   display: block;
+   height: 23px;
+   width: 143px;
+   position: absolute;
+   z-index: 2;
+}
+#RollOver2 a .hover{
+   visibility: hidden;
+}
+#RollOver2 a:hover .hover{
+   visibility: visible;
+}
+#RollOver2 a:hover span{
+   visibility: hidden;
+}
+#bienvenido{
+	background-image:url(images/bienvenido.png);
+	width:309px;
+	height:48px;
+	color:#002F67;
+	font-size:13px;
+	line-height:47px;
+	padding-left:38px;
+}

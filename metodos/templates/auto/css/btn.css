@@ -1,0 +1,18 @@
+button, .boton1, input[type="button"], input[type="submit"] {
+  font-family:"Swis721CnBTRoman";
+  font-weight:bold;
+  font-size: 1.1em;
+  color: #277aaa;
+  background: #e4f1fb;
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  padding: 3px 13px 3px 13px;
+  border: solid #73a8d1 1px;
+  text-decoration: none;
+}
+
+button:hover, .boton1:hover, input[type="button"]:hover, input[type="submit"]:hover {
+  background: #d7ebf9;
+  text-decoration: none;
+}

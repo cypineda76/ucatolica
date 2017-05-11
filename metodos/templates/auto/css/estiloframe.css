@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+.div{
+	 vertical-align: bottom;
+
+}
+.titulo{
+font-family: "Swis721CnBTRoman";
+	font-size:16px;
+	color:#005BAA;
+	}
+.texto{
+font-family: "Swis721CnBTRoman";
+	font-size:14px;
+	color:#4D4D4D;
+	}
+	.pp {line-height:20%;
+font-family: "Swis721CnBTRoman";
+	font-size:13px;
+	color:#4D4D4D;}
+@font-face {
+    font-family: "Swis721CnBTRoman";
+    src: url('swz721c-webfont.eot');
+    src: url('swz721c-webfont.eot?#iefix') format('embedded-opentype'),
+         url('swz721c-webfont.woff') format('woff'),
+         url('swz721c-webfont.ttf') format('truetype'),
+         url('swz721c-webfont.svg#Swis721CnBTRoman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+ font-family: "Swis721 Cn BT";
+ src: url("swz721c.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: "Swis721 Cn BT";
+ src: url("swz721c.TTF") /* TTF file for CSS3 browsers */
+}

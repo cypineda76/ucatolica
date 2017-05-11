@@ -1,0 +1,195 @@
+.Estilot {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+}
+
+.est1 {font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight:100;}
+
+.est2{color: #FFFFFF;}
+
+.est3 {
+
+	font-family:  Arial, Helvetica, sans-serif; font-size: 12px; 
+
+	font-weight:100;
+
+}
+
+.titulos_ext {
+	font-style: italic;
+	color: #666666;
+	font:14px Arial, "Times New Roman", Times, serif;
+	font-weight:100;
+}
+.estsal { }
+
+.estent {background:#eaeef3 }
+
+.alerta{
+
+color:#CC0000;
+
+}
+.estestad {
+color: #000066;
+font-weight: 100;
+background-color:#EAF5FF;
+}
+.titestad {
+	font-size: 12px;
+	color: #000066;
+	font-weight: 100;
+	font-style: italic;
+}
+.et1 {color: #0001B4}
+.normal{
+	cursor:default;
+}
+.letra_grande {
+	font-size: 12px;
+	font-style: italic;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;	
+	/*background:url(../img/fondo.jpg);*/
+}
+
+table{
+	border-collapse:1;
+	background-color:#eaeef3;
+	word-spacing: -1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align:justify;
+	overflow:hidden;
+}
+select {
+	font-family: Arial, "Times New Roman", Times, serif; /* Para el tipo de letra*/
+	font-size: 12px; /* para el tamaño */
+	/*color: #5F7CAE;*/ /* para un color de texto casi azul */
+	background: #E0E0E0; /* para un color de fondo casi celeste */
+    padding: 1px;
+	border: 1px solid #9B9B9B;
+	border-collapse:collapse;
+}
+.Arial{
+	font-family: Arial, "Times New Roman", Times, serif; /* Para el tipo de letra*/
+	font-size: 12px; /* para el tamaño */
+	font-weight:100;
+}
+
+.Arial_ex{
+	font-family: Arial, "Times New Roman", Times, serif; /* Para el tipo de letra*/
+	font-size: 12px; /* para el tamaño */
+	font-weight:100;
+	color:#333333;
+}
+
+.Arial2{
+	font-family: Arial, "Times New Roman", Times, serif; /* Para el tipo de letra*/
+	font-size: 12px; /* para el tamaño */
+	font-weight:100;
+	color:#CC0000;
+}
+.Arial3{
+	font-family: Arial, "Times New Roman", Times, serif; /* Para el tipo de letra*/
+	font-size: 12px; /* para el tamaño */
+	font-weight:100;
+	color:#CC0000;
+}
+
+.respuesta{
+	font-family: Arial, "Times New Roman", Times, serif; /* Para el tipo de letra*/
+	font-size: 12px; /* para el tamaño */
+	font-weight:100;
+	background: #FFFFCC;
+}
+
+.respuesta_ex{
+	font-family: Arial, "Times New Roman", Times, serif; /* Para el tipo de letra*/
+	font-size: 12px; /* para el tamaño */
+	font-weight:100;
+	background: #FFFFCC;
+	color:#282828;
+}
+.botoncerrar{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color:#5082C9;
+	/*height: 20px; 
+	width: 130px; */
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight:100;
+}
+.texto{
+	font-family: Arial, "Times New Roman", Times, serif; /* Para el tipo de letra*/
+	font-size: 12px;
+}
+.textoNeg{
+	font-family: Arial, "Times New Roman", Times, serif; /* Para el tipo de letra*/
+	font-size: 14px;
+	color:#FFF;
+	font-weight:bold;
+}
+.tittab{
+	font-family: Arial, "Times New Roman", Times, serif; /* Para el tipo de letra*/
+	font-size: 11px;
+	color:#FFF;
+	font-weight:bold;
+	background: url(../img/Barra1.jpg);
+}
+.Estilo1 {
+	font-size: 12px;
+	font-weight: 100;
+	color: #FFFFFF;
+}
+.Estilo8 {
+	font-size: 12px;
+	font-weight: 100;
+}
+.Estilo10 {font-size: 12px;
+}
+.estilocelda{ 
+    background-color:CCC; 
+    color:FFF; 
+    font-weight:100; 
+    font-size:10pt; 
+} 
+
+a.css3button {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #123d54;
+	width:100px;
+	height:100px;
+	padding: 3px 6px;
+	background: -moz-linear-gradient(
+		top,
+		#afd9fa 0%,
+		#588fad);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#afd9fa),
+		to(#588fad));
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border: 1px solid #003366;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,1);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,1);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.7),
+		0px 1px 0px rgba(255,255,255,0.3);
+	}
+
+body p {
+	text-align: left;
+}*/

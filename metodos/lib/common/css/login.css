@@ -1,0 +1,123 @@
+body {
+	background:#F1F1F1;
+	display: block;
+	max-width: 100%;
+    height: auto;
+	padding-top: 100px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.fondoblan{
+	background-size: cover;
+	position: relative;
+	z-index: 12;
+	background:#FFF;
+	opacity:0.75;
+	-moz-opacity:0.75;
+	-khtml-opacity:0.75;
+	filter:alpha(opacity=75);
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	-webkit-box-shadow: rgba(0,0,0,0.4) 1px 4px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px;
+	box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px;
+	border-radius: 1em;
+	width:100%;
+	height:89%;
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+	body{
+		/*background: url("../images/fondo1199.jpg") no-repeat fixed;*/
+		display: block;
+		max-width: 100%;
+		height: auto;
+		padding-top: 60px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	}
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+	body{
+		/*background: url("../images/fondo1199.jpg") no-repeat fixed;*/
+		display: block;
+		max-width: 100%;
+		height: auto;
+		padding-top: 100px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	}
+}
+
+/*  Small devices (tablets, 768px and up)  */
+@media (max-width: 767px) and (min-width: 480px) {
+	body{
+		/*background: url("../images/fondo767.jpg") no-repeat fixed;*/
+		display: block;
+		max-width: 100%;
+		height: auto;
+		padding-top: 60px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	}
+	
+	.fondoblan{
+		background-size: cover;
+		position: relative;
+		z-index: 12;
+		background:#FFF;
+		opacity:0.75;
+		-moz-opacity:0.75;
+		-khtml-opacity:0.75;
+		filter:alpha(opacity=75);
+		-moz-border-radius: 1em;
+		-webkit-border-radius: 1em;
+		-webkit-box-shadow: rgba(0,0,0,0.4) 1px 4px;
+		-moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px;
+		box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px;
+		border-radius: 1em;
+		width:97%;
+		height:89%;
+	}
+}
+
+/*  Medium devices (desktops, 992px and up)  */
+@media (max-width: 479px) {
+	body{
+		/*background: url("../images/fondo480.jpg") no-repeat fixed;*/
+		display: block;
+		max-width: 100%;
+		height: auto;
+		padding-top: 60px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	}
+	
+	.fondoblan{
+		background-size: cover;
+		position: relative;
+		z-index: 12;
+		background:#FFF;
+		opacity:0.75;
+		-moz-opacity:0.75;
+		-khtml-opacity:0.75;
+		filter:alpha(opacity=75);
+		-moz-border-radius: 1em;
+		-webkit-border-radius: 1em;
+		-webkit-box-shadow: rgba(0,0,0,0.4) 1px 4px;
+		-moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px;
+		box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px;
+		border-radius: 1em;
+		width:97%;
+		height:89%;
+	}
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+  padding-bottom: 0px;
+  background: rgba(5, 20, 50, 0.3);
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}

@@ -1,0 +1,27 @@
+a:link {
+	color: #004B6B;
+	font-weight:bold;
+	font:Georgia, "Times New Roman", Times, serif;
+}
+a:hover {
+	color: #004B6B;
+	text-decoration: underline;
+	font-family: Tahoma;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	background-color: #ADD9FA;
+	font-weight:bold;
+}
+a:active {
+	color: #004B6B;
+	font-weight:bold;
+	font:Georgia, "Times New Roman", Times, serif;
+}
+a:visited {
+	color: #004B6B;
+	font-weight:bold;
+	font:Georgia, "Times New Roman", Times, serif;
+}
