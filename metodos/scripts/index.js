@@ -1,5 +1,75 @@
 $(document).ready(function($){});
 
+function ag(it){
+	$.fancybox({
+		//modal	: 'true',
+		href	: 'index.php',
+		type 	: 'ajax',
+		ajax	: {
+			type : 'post',
+			data : {ACC:"MATRIZAG", it:it}
+		},
+		topRatio: '0',
+		afterShow: function (){
+			$("#dimfil").bind('change', genmatrizag).trigger('change');
+			$("#btnproc").bind("click", enviarMatrizag);
+		},
+	});
+}
+
+function genmatrizag(){
+	var dimfil = $("#dimfil").val();
+	var dimcol = $("#dimfil").val();
+	$.ajax({
+		type    : "POST",
+		cache   : false,
+		url     : "index.php",
+		data	: "ACC=GENERARMATRIZAG&dimfil="+dimfil+"&dimcol="+dimcol,
+		success: function(data) {
+			$("#divmatriz").html(data);
+		}
+	});
+}
+
+function llenarmatrizag(){
+	var dimfil = $("#dimfil").val();
+	var dimcol = $("#dimfil").val();
+	$.ajax({
+		type    : "POST",
+		cache   : false,
+		url     : "index.php",
+		data	: "ACC=GENERARMATRIZAG&dimfil="+dimfil+"&dimcol="+dimcol+"&LLENAR=OK",
+		success: function(data) {
+			$("#divmatriz").html(data);
+		}
+	});
+}
+
+function enviarMatrizag(){
+	var dimfil = $("#dimfil").val();
+	var dimcol = $("#dimcol").val();
+	var population = $("#population").val();
+	var generations = $("#generations").val();
+	var elitism = $("#elitism").val();
+    $("#formMatriz :input:text").map(function(){
+         if( !$(this).val() ) {
+         	alert("Debe llenar toda la matriz");
+         	return false;
+        }   
+    });
+    var matriz = $("#formMatriz").serialize();
+	$.ajax({
+		type    : "POST",
+		cache   : false,
+		url     : "algortimoGenetico.php",
+		data	: "matriz="+matriz+'&population='+population+'&generations='+generations+'&elitism='+elitism+'&city='+dimfil,
+		success: function(data) {
+			parent.$.fancybox.close();
+			$("#responseDIV").html(data);
+		}
+	});
+}
+
 function gauss(it){ //0 = Jordan, 1= Seidel
 	$.fancybox({
 		//modal	: 'true',

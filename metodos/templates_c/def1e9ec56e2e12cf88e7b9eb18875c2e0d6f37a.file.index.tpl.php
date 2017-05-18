@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2017-05-14 05:48:03
+<?php /* Smarty version Smarty-3.1.8, created on 2017-05-18 05:53:17
          compiled from "templates/auto\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3389588ff668ce7b90-61622649%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'def1e9ec56e2e12cf88e7b9eb18875c2e0d6f37a' => 
     array (
       0 => 'templates/auto\\index.tpl',
-      1 => 1494733220,
+      1 => 1495064704,
       2 => 'file',
     ),
   ),
@@ -124,6 +124,9 @@ $_smarty_tpl->tpl_vars['ejercicio']->first = $_smarty_tpl->tpl_vars['ejercicio']
                         </li>
                         <li>
                             <a href="#" onclick="runggekutta(0);"><i class="fa fa-bar-chart-o fa-fw"></i> Ecuaciones diferenciales numericas</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="ag(0);"><i class="fa fa-bar-chart-o fa-fw"></i> Algoritmo Genetico</a>
                         </li>
                     </ul>
                 </div>

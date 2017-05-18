@@ -8,9 +8,6 @@ include_once('lib/conex.php');
 include_once('lib/dao/usuarioDAO.php');
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-	$smarty = new Smarty;
-	$smarty->setTemplateDir("templates/auto");
-	$smarty->assign('plantilla',"auto");
 	switch ($_REQUEST['ACC']) {
 		case 'LOGIN':
 			$DB = NewADOConnection(DB_CONFIG);

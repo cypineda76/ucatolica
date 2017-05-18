@@ -95,6 +95,9 @@
                         <li>
                             <a href="#" onclick="runggekutta(0);"><i class="fa fa-bar-chart-o fa-fw"></i> Ecuaciones diferenciales numericas</a>
                         </li>
+                        <li>
+                            <a href="#" onclick="ag(0);"><i class="fa fa-bar-chart-o fa-fw"></i> Algoritmo Genetico</a>
+                        </li>
                     </ul>
                 </div>
             </div>

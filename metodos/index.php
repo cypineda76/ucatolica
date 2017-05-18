@@ -51,6 +51,39 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 			$smarty->assign('matriz',$matriz);
 			$plantilla = 'matriz.tpl';
 		break;
+		case 'MATRIZAG':
+			$smarty->assign('ejercicio',$_REQUEST['it']);
+			$plantilla = 'paramag.tpl';
+		break;
+		case 'GENERARMATRIZAG':
+			$numfila = $_REQUEST['dimfil'];
+			$numcolu = $_REQUEST['dimcol'];
+			for($i = 1; $i <= $numfila; $i++ ) {
+				$matriz['FIL'][$i] = 0;
+				for($j = 1; $j <= $numcolu; $j++ ) {
+					$matriz['TITCOL'][$j] = 0;
+					$matriz['COL'][$j] = 0;
+					$m[$i][$j] = 1;
+				}
+			}
+			$cont = 1;
+			for($i = 1; $i <= count($m); $i++ ) {
+				for($j = $cont; $j <= count($m[$i]); $j++ ) {
+					if($i == $j){
+						$matriz['LLE'][$i][$j] = '0';
+					}else{
+						if(isset($_REQUEST['LLENAR'])){
+							$matriz['LLE'][$i][$j] = rand(0, 9);
+						}else{
+							$matriz['LLE'][$i][$j] = '';
+						}
+					}
+				}
+				$cont ++;
+			}
+			$smarty->assign('matriz',$matriz);
+			$plantilla = 'matrizag.tpl';
+		break;
 	}
 	$smarty->display($plantilla);
 } else {

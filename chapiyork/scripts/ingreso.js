@@ -1,26 +1,5 @@
 $(document).ready(function($){
   $('#btning').bind('click', valid);
-  $( "#form-username" ).keypress(function(e) {
-    var key;
-    if(window.e)
-          key = window.e.keyCode; 
-    else
-          key = e.which;
-    if (key == 13){
-      valid();
-    }
-  });
-  $( "#form-password" ).keypress(function(e) {
-    var key;
-    if(window.e)
-          key = window.e.keyCode; 
-    else
-          key = e.which;
-    if (key == 13){
-      valid();
-    }
-  });
-  /*v*/
 });
 
 function valid(){
