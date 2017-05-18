@@ -13,8 +13,12 @@ class ClientesDAO{
     }
     $sql = "SELECT cli.customer_id , type_document_id , document , firts_name , last_name , gender , date_birth , type_id , type_descriptions , contact_id , phone , email , company_id , company_code , company_name , address_id , street , city_id , city_name , department_id , department_name , country_id , country_descriptions FROM customer cli, document_type tip, contact con, company com, address dir, city ciu, department dept, country pais WHERE cli.type_document_id=tip.type_id AND cli.customer_id=con.customer_id AND cli.customer_id=com.customer_id AND cli.customer_id=dir.customer_id AND dir.code_city=ciu.city_id AND ciu.city_department=dept.department_id AND dept.department_country=pais.country_id $tmp";
     $rs = $this->conn->Execute($sql) or die($this->conn->ErrorMsg());
-    while($row = $rs->fetchrow($rs)){
-      $response[] = array('customer_id'=>$row['customer_id'], 'type_document_id'=>$row['type_document_id'], 'document'=>$row['document'], 'firts_name'=>$row['firts_name'], 'last_name'=>$row['last_name'], 'gender'=>$row['gender'], 'date_birth'=>$row['date_birth'], 'type_id'=>$row['type_id'], 'type_descriptions'=>$row['type_descriptions'], 'contact_id'=>$row['contact_id'], 'phone'=>$row['phone'], 'email'=>$row['email'], 'company_id'=>$row['company_id'], 'company_code'=>$row['company_code'], 'company_name'=>$row['company_name'], 'address_id'=>$row['address_id'], 'street'=>$row['street'], 'city_id'=>$row['city_id'], 'city_name'=>$row['city_name'], 'department_id'=>$row['department_id'], 'department_name'=>$row['department_name'], 'country_id'=>$row['country_id'], 'country_descriptions'=>$row['country_descriptions']);
+    if($rs->RecordCount($rs)<=0){
+      $response = "";
+    }else{
+      while($row = $rs->fetchrow($rs)){
+        $response[] = array('customer_id'=>$row['customer_id'], 'type_document_id'=>$row['type_document_id'], 'document'=>$row['document'], 'firts_name'=>$row['firts_name'], 'last_name'=>$row['last_name'], 'gender'=>$row['gender'], 'date_birth'=>$row['date_birth'], 'type_id'=>$row['type_id'], 'type_descriptions'=>$row['type_descriptions'], 'contact_id'=>$row['contact_id'], 'phone'=>$row['phone'], 'email'=>$row['email'], 'company_id'=>$row['company_id'], 'company_code'=>$row['company_code'], 'company_name'=>$row['company_name'], 'address_id'=>$row['address_id'], 'street'=>$row['street'], 'city_id'=>$row['city_id'], 'city_name'=>$row['city_name'], 'department_id'=>$row['department_id'], 'department_name'=>$row['department_name'], 'country_id'=>$row['country_id'], 'country_descriptions'=>$row['country_descriptions']);
+      }
     }
     return $response;
   }

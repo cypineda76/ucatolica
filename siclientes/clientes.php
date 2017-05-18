@@ -89,7 +89,12 @@ switch ($_SERVER['REQUEST_METHOD']) {
 	default: //Consultar
 		$_REQUEST['document'] = (isset($_REQUEST['document'])) ? $_REQUEST['document'] : "";
 		$listacli = $objClientesDAO->getCustomer($_REQUEST['document']);
-		echo json_encode($listacli);
+		if($listacli == ""){
+			$msn = array('val'=>406, 'msn'=>'No hay Datos');
+			echo json_encode($msn);
+		}else{
+			echo json_encode($listacli);
+		}
 	break;
 }
 ?>
