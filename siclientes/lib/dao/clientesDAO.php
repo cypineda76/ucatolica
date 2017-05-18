@@ -25,6 +25,9 @@ class ClientesDAO{
 
   function deleteCustomer($document){
     $cliente = $this->getCustomer($document);
+    if($cliente == ""){
+      return 0;
+    }
     $address = $this->deleteCustomer_Address($cliente[0]['customer_id']);
     $contac = $this->deleteCustomer_Contact($cliente[0]['customer_id']);
     $company = $this->deleteCustomer_Company($cliente[0]['customer_id']);
@@ -67,6 +70,9 @@ class ClientesDAO{
 
   function updateCustomer($document, $type_document_id, $document_mod, $firts_name, $last_name, $gender, $date_birth, $direccion, $telefono, $correo){
     $cliente = $this->getCustomer($document);
+    if($cliente == ""){
+      return 0;
+    }
     if($direccion != ''){
       $address = $this->updateCustomer_Address($cliente[0]['customer_id'], $direccion);
     }
@@ -172,8 +178,6 @@ class ClientesDAO{
     $sql = "INSERT INTO customer(type_document_id, document, firts_name, last_name, gender, date_birth) VALUES ('".$type_document_id."', '".$document."', '".$firts_name."', '".$last_name."', '".$gender."', '".$date_birth."')";
     $rs = $this->conn->Execute($sql) or die($this->conn->ErrorMsg());
     if($this->conn->Insert_ID() > 0){
-      //$cliente = $this->getCustomer($document);
-      //$customer_id  = $cliente[0]['customer_id'];
       $customer_id = $this->conn->Insert_ID();
       if($street != ''){
         $address = $this->insertAddress($customer_id, $street, $code_city);
