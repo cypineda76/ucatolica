@@ -29,7 +29,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
 			echo json_encode($msn);
 		}else{
 			$DB->Execute( "begin work;" );
-			$DB->debug=true;
 			$crear = $objClientesDAO->insertCustomer($_REQUEST['type_document_id'], $_REQUEST['document'], $_REQUEST['firts_name'], $_REQUEST['last_name'], $_REQUEST['gender'], $_REQUEST['date_birth'], $_REQUEST['street'], $_REQUEST['code_city'], $_REQUEST['phone'], $_REQUEST['email'], $_REQUEST['company_code'], $_REQUEST['company_name']);
 			if($crear <=0){
 				$DB->Execute( "rollback work;" );
@@ -57,7 +56,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
 		$_REQUEST['street'] = (isset($_REQUEST['street'])) ? $_REQUEST['street'] : "";
 		$_REQUEST['phone'] = (isset($_REQUEST['phone'])) ? $_REQUEST['phone'] : "";
 		$_REQUEST['email'] = (isset($_REQUEST['email'])) ? $_REQUEST['email'] : "";
-		$DB->debug=true;
 		$actualizar = $objClientesDAO->updateCustomer($_REQUEST['document'], $_REQUEST['type_document_id'], $_REQUEST['document_mod'], $_REQUEST['firts_name'], $_REQUEST['last_name'], $_REQUEST['gender'], $_REQUEST['date_birth'], $_REQUEST['street'], $_REQUEST['phone'], $_REQUEST['email']);
 		if($actualizar <=0){
 			$DB->Execute( "rollback work;" );
@@ -75,7 +73,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
 			die( json_encode( $msn ) );
 		}
 		$DB->Execute( "begin work;" );
-		$DB->debug=true;
 		$borrar = $objClientesDAO->deleteCustomer($_REQUEST['document']);
 		if($borrar <=0){
 			$DB->Execute( "rollback work;" );

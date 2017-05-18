@@ -17,7 +17,7 @@ class ClientesDAO{
       $response = "";
     }else{
       while($row = $rs->fetchrow($rs)){
-        $response[] = array('customer_id'=>$row['customer_id'], 'type_document_id'=>$row['type_document_id'], 'document'=>$row['document'], 'firts_name'=>$row['firts_name'], 'last_name'=>$row['last_name'], 'gender'=>$row['gender'], 'date_birth'=>$row['date_birth'], 'type_id'=>$row['type_id'], 'type_descriptions'=>$row['type_descriptions'], 'contact_id'=>$row['contact_id'], 'phone'=>$row['phone'], 'email'=>$row['email'], 'company_id'=>$row['company_id'], 'company_code'=>$row['company_code'], 'company_name'=>$row['company_name'], 'address_id'=>$row['address_id'], 'street'=>$row['street'], 'city_id'=>$row['city_id'], 'city_name'=>$row['city_name'], 'department_id'=>$row['department_id'], 'department_name'=>$row['department_name'], 'country_id'=>$row['country_id'], 'country_descriptions'=>$row['country_descriptions']);
+        $response[] = array('customer_id'=>$row['customer_id'], 'type_document_id'=>$row['type_document_id'], 'document'=>$row['document'], 'firts_name'=>$row['firts_name'], 'last_name'=>$row['last_name'], 'gender'=>$row['gender'], 'date_birth'=>$row['date_birth'], 'type_id'=>$row['type_id'], 'type_descriptions'=>$row['type_descriptions'], 'contact_id'=>$row['contact_id'], 'phone'=>$row['phone'], 'email'=>$row['email'], 'company_id'=>$row['company_id'], 'company_code'=>$row['company_code'], 'company_name'=>$row['company_name'], 'address_id'=>$row['address_id'], 'street'=>$row['street'], 'city_id'=>$row['city_id'], 'city_name'=>$row['city_name'], 'department_id'=>$row['department_id'], 'department_name'=>$row['department_name'], 'country_id'=>$row['country_id'], 'country_descriptions'=>$row['country_descriptions'], 'compras'=>$this->getShopping($row['customer_id']));
       }
     }
     return $response;
@@ -216,13 +216,36 @@ class ClientesDAO{
     return $this->conn->Affected_Rows();
   }
 
-  function insertShopping($customer_id, $producto, $nombre_producto, $cantidad, $total){
+  function insertShopping($document, $producto, $nombre_producto, $cantidad, $total){
+    $cliente = $this->getCustomer($document);
+    if($cliente == ""){
+      return 0;
+    }
+    $customer_id = $cliente[0]['customer_id'];
     $sql = "INSERT INTO shopping (producto, nombre_producto, cantidad, total, customer_id) VALUES ('".$producto."', '".$nombre_producto."', '".$cantidad."', '".$total."', '".$customer_id."')";
     $this->conn->Execute($sql);
     return $this->conn->Affected_Rows();
   }
 
-  function insertUser_customer($customer_id, $usunom, $usulog, $usupas){
+  function getShopping($customer_id){
+    $sql = "SELECT * FROM shopping WHERE customer_id='".$customer_id."'";
+    $rs = $this->conn->Execute($sql) or die($this->conn->ErrorMsg());
+    if($rs->RecordCount($rs)<=0){
+      $response = "Sin Compras";
+    }else{
+      while($row = $rs->fetchrow($rs)){
+        $response[] = array('producto'=>$row['producto'], 'nombre_producto'=>($row['nombre_producto']), 'cantidad'=>$row['cantidad'], 'total'=>$row['total']);
+      }
+    }
+    return $response;
+  }
+
+  function insertUser_customer($document, $usunom, $usulog, $usupas){
+    $cliente = $this->getCustomer($document);
+    if($cliente == ""){
+      return 0;
+    }
+    $customer_id = $cliente[0]['customer_id'];
     $sql = "INSERT INTO user_customer (usunom, usulog, usupas, customer_id) VALUES ('".$usunom."', '".$usulog."', '".md5($usupas)."', '".$customer_id."')";
     $this->conn->Execute($sql);
     return $this->conn->Affected_Rows();
