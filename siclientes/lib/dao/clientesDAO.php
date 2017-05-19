@@ -270,5 +270,40 @@ class ClientesDAO{
     }
     return $response;
   }
+
+  function getCountry(){
+    $sql = "SELECT * FROM country ORDER BY country_descriptions ASC";
+    $rs = $this->conn->Execute($sql) or die($this->conn->ErrorMsg());
+    while($row = $rs->fetchrow($rs)){
+      $response[] = array('country_id'=>$row['country_id'], 'country_descriptions'=>$row['country_descriptions']);
+    }
+    return $response;
+  }
+
+  function getDepartment($country){
+    $tmp = '';
+    if($country != ''){
+      $tmp = " AND department_country='".$country."'";
+    }
+    $sql = "SELECT * FROM department WHERE 1=1 $tmp ORDER BY department_name ASC";
+    $rs = $this->conn->Execute($sql) or die($this->conn->ErrorMsg());
+    while($row = $rs->fetchrow($rs)){
+      $response[] = array('department_id'=>$row['department_id'], 'department_name'=>($row['department_name']), 'department_country'=>$row['department_country']);
+    }
+    return $response;
+  }
+
+  function getCity($department){
+    $tmp = '';
+    if($department != ''){
+      $tmp = " AND city_department='".$department."'";
+    }
+    $sql = "SELECT * FROM city WHERE 1=1 $tmp ORDER BY city_name ASC";
+    $rs = $this->conn->Execute($sql) or die($this->conn->ErrorMsg());
+    while($row = $rs->fetchrow($rs)){
+      $response[] = array('city_id'=>$row['city_id'], 'city_name'=>($row['city_name']), 'city_department'=>$row['city_department']);
+    }
+    return $response;
+  }
 }
 ?>

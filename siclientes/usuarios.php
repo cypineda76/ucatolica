@@ -12,17 +12,16 @@ $DB->Connect(DB_SERVER,DB_USER,DB_PASS,DB_DATABASE);
 $objClientesDAO = new ClientesDAO($DB);
 switch ($_SERVER['REQUEST_METHOD']) {
 	case 'POST': //Crear
-		$_REQUEST['producto'] = (isset($_REQUEST['producto'])) ? $_REQUEST['producto'] : "";
-		$_REQUEST['nombre_producto'] = (isset($_REQUEST['nombre_producto'])) ? $_REQUEST['nombre_producto'] : "";
-		$_REQUEST['cantidad'] = (isset($_REQUEST['cantidad'])) ? $_REQUEST['cantidad'] : "";
-		$_REQUEST['total'] = (isset($_REQUEST['total'])) ? $_REQUEST['total'] : "";
+		$_REQUEST['usunom'] = (isset($_REQUEST['usunom'])) ? $_REQUEST['usunom'] : "";
+		$_REQUEST['usulog'] = (isset($_REQUEST['usulog'])) ? $_REQUEST['usulog'] : "";
+		$_REQUEST['usupas'] = (isset($_REQUEST['usupas'])) ? $_REQUEST['usupas'] : "";
 		$_REQUEST['document'] = (isset($_REQUEST['document'])) ? $_REQUEST['document'] : "";
-		if($_REQUEST['producto'] == "" || $_REQUEST['nombre_producto'] == "" || $_REQUEST['cantidad'] == "" || $_REQUEST['total'] == "" || $_REQUEST['document'] == ""){
+		if($_REQUEST['usunom'] == "" || $_REQUEST['usulog'] == "" || $_REQUEST['usupas'] == "" || $_REQUEST['document'] == ""){
 			$msn = array('val'=>406, 'msn'=>'Debe completar todos los campos');
 			echo json_encode($msn);
 		}else{
 			$DB->Execute( "begin work;" );
-			$crear = $objClientesDAO->insertShopping($_REQUEST['document'], $_REQUEST['producto'], $_REQUEST['nombre_producto'], $_REQUEST['cantidad'], $_REQUEST['total']);
+			$crear = $objClientesDAO->insertUser_customer($_REQUEST['document'], $_REQUEST['usunom'], $_REQUEST['usulog'], $_REQUEST['usupas']);
 			if($crear <=0){
 				$DB->Execute( "rollback work;" );
 				$msn = array('val'=>500, 'msn'=>'Erro! No se pudo realizar el proceso');
@@ -34,13 +33,19 @@ switch ($_SERVER['REQUEST_METHOD']) {
 		}
 	break;
 	default: //Consultar
-		$_REQUEST['document'] = (isset($_REQUEST['document'])) ? $_REQUEST['document'] : "";
-		$listacli = $objClientesDAO->getCustomer($_REQUEST['document']);
-		if($listacli == ""){
-			$msn = array('val'=>406, 'msn'=>'No hay Datos');
-			echo json_encode($msn);
+		$_REQUEST['usulog'] = (isset($_REQUEST['usulog'])) ? $_REQUEST['usulog'] : "";
+		$_REQUEST['usupas'] = (isset($_REQUEST['usupas'])) ? $_REQUEST['usupas'] : "";
+		if($_REQUEST['usulog'] != '' && $_REQUEST['usupas']!=''){
+			$listausu = $objClientesDAO->getUser_customer($_REQUEST['usulog'], $_REQUEST['usupas']);
+			if($listausu <= 0){
+				$msn = array('val'=>406, 'msn'=>'El usuario no existe');
+				echo json_encode($msn);
+			}else{
+				echo json_encode($listausu);
+			}
 		}else{
-			echo json_encode($listacli);
+			$msn = array('val'=>500, 'msn'=>'Debe completar todos los campos');
+			echo json_encode($msn);
 		}
 	break;
 }
