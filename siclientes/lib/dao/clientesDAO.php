@@ -305,5 +305,35 @@ class ClientesDAO{
     }
     return $response;
   }
+
+  function insertUser_admin($user_name, $user_login, $user_pass){
+    $sql = "INSERT INTO user (user_name, user_login, user_pass) VALUES ('".$user_name."', '".$user_login."', '".md5($user_pass)."')";
+    $this->conn->Execute($sql);
+    return $this->conn->Affected_Rows();
+  }
+
+  function getUser_admin($user_login, $user_pass){
+    $sql = "SELECT COUNT(*) AS cant FROM user WHERE user_login='".$user_login."' AND user_pass = '".md5($user_pass)."'";
+    $rs = $this->conn->Execute($sql) or die($this->conn->ErrorMsg());
+    $row = $rs->fetchrow($rs);
+    if($row['cant'] > 0){
+      return $this->getDatos_User_admin($user_login);
+    }else{
+      return 0;
+    }
+  }
+
+  function getDatos_User_admin($user_login){
+    $tmp = "";
+    if($user_login != ""){
+      $tmp = " AND user_login='".$user_login."'";
+    }
+    $sql = "SELECT * FROM user WHERE 1=1 $tmp ORDER BY user_name";
+    $rs = $this->conn->Execute($sql) or die($this->conn->ErrorMsg());
+    while($row = $rs->fetchrow($rs)){
+      $response[] = array('user_id'=>$row['user_id'], 'user_name'=>($row['user_name']));
+    }
+    return $response;
+  }
 }
 ?>

@@ -25,7 +25,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 		$_REQUEST['company_code'] = (isset($_REQUEST['company_code'])) ? $_REQUEST['company_code'] : "";
 		$_REQUEST['company_name'] = (isset($_REQUEST['company_name'])) ? $_REQUEST['company_name'] : "";
 		if($_REQUEST['type_document_id'] == "" || $_REQUEST['document'] == "" || $_REQUEST['firts_name'] == "" || $_REQUEST['last_name'] == "" || $_REQUEST['gender'] == "" || $_REQUEST['date_birth'] == "" || $_REQUEST['street'] == "" || $_REQUEST['phone'] == "" || $_REQUEST['email'] == ""){
-			$msn = array('val'=>406, 'msn'=>'Debe completar todos los campos');
+			$msn = array('val'=>406, 'msn'=>'Error! No hay parametros');
 			echo json_encode($msn);
 		}else{
 			$DB->Execute( "begin work;" );
@@ -42,7 +42,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 	break;
 	case 'PUT': //Actualizar
 		if(!isset($_REQUEST['document'])){
-			$msn = array('val'=>406, 'msn'=>'Error! No hay parametro de identificacion del cliente');
+			$msn = array('val'=>406, 'msn'=>'Error! No hay parametros');
 			die( json_encode( $msn ) );
 		}
 		$DB->Execute( "begin work;" );
@@ -69,7 +69,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 	case 'DELETE': //Borrar
 		$_REQUEST['document'] = (isset($_REQUEST['document'])) ? $_REQUEST['document'] : "";
 		if(!isset($_REQUEST['document'])){
-			$msn = array('val'=>406, 'msn'=>'Error! No hay parametro de identificacion del cliente');
+			$msn = array('val'=>406, 'msn'=>'Error! No hay parametros');
 			die( json_encode( $msn ) );
 		}
 		$DB->Execute( "begin work;" );
@@ -87,7 +87,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 		$_REQUEST['document'] = (isset($_REQUEST['document'])) ? $_REQUEST['document'] : "";
 		$listacli = $objClientesDAO->getCustomer($_REQUEST['document']);
 		if($listacli == ""){
-			$msn = array('val'=>406, 'msn'=>'No hay Datos');
+			$msn = array('val'=>407, 'msn'=>'No hay Datos');
 			echo json_encode($msn);
 		}else{
 			echo json_encode($listacli);
