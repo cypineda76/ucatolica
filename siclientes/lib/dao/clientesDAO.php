@@ -335,5 +335,14 @@ class ClientesDAO{
     }
     return $response;
   }
+
+  function getTipo_Documento(){
+    $sql = "SELECT * FROM document_type ORDER BY type_descriptions";
+    $rs = $this->conn->Execute($sql) or die($this->conn->ErrorMsg());
+    while($row = $rs->fetchrow($rs)){
+      $response[] = array('type_id'=>$row['type_id'], 'descrip'=>$row['type_descriptions']);
+    }
+    return $response;
+  }
 }
 ?>

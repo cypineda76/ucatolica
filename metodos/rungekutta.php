@@ -23,15 +23,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 					$xi[$n] = $ObjFunciones->suma($xi[$n-1], $h);
 					$yi[$n] = $ObjFunciones->suma($yi[$n-1], $k[$n-1]*$h);
 				}
-				//if($xi[$n]<2){
 					$k[$n] = $xi[$n]*$yi[$n];
 					$arr[$n] = array('i'=>$i, 'x'=>$xi[$n], 'y'=>$yi[$n], 'k'=>$k[$n]);
-				//}
 				$i++;
-				/*if($xi[$n]>=2){
-					$arr[$n] = array('i'=>$i, 'x'=>$xi[$n], 'y'=>$yi[$n], 'k'=>'');
-					break;
-				}*/
 			}
 		break;
 		case '2':
@@ -100,7 +94,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 		$xs[] = $value['x'];
 		$ys[] = $value['y'];
 	}
-	//#########################charts#########################
     $chart = new Highchart();
 	$chart->chart = array('renderTo' => 'grafica', 'type' => 'scatter');
 	$chart->xAxis->categories = $xs;

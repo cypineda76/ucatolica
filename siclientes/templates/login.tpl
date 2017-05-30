@@ -5,7 +5,7 @@
   <title>Login </title>
   <link rel="stylesheet" href="templates/css/login.css">
   <script src="scripts/lib/jquery.js"></script>
-  <script src="scripts/index.js"></script>
+  <script src="scripts/login.js"></script>
 </head>
 <body>
   <div class="wrap">

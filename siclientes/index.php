@@ -46,6 +46,66 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 				echo json_encode($msn);
 			}
 		break;
+		case 'LISTACLIENTES':
+			$_REQUEST['document'] = (isset($_REQUEST['document'])) ? $_REQUEST['document'] : "";
+			$listacli = $objClientesDAO->getCustomer($_REQUEST['document']);
+			$smarty = new Smarty;
+				$smarty->setTemplateDir("templates");
+			if($listacli != ""){
+				$smarty->assign('rep',$listacli);
+				$smarty->display('listclientes.tpl');
+			}else{
+				$smarty->display('nodata.tpl');
+			}
+		break;
+		case 'VTNEDITCLI':
+			$_REQUEST['document'] = (isset($_REQUEST['document'])) ? $_REQUEST['document'] : "";
+			$listacli = $objClientesDAO->getCustomer($_REQUEST['document']);
+			$tiddoc = $objClientesDAO->getTipo_Documento();
+			$smarty = new Smarty;
+			$smarty->setTemplateDir("templates");
+			$smarty->assign('rep',$listacli[0]);
+			$smarty->assign('tipdoc',$tiddoc);
+			$smarty->display('vtneditcliente.tpl');
+		break;
+		case 'VTNNEWCLIENTE':
+			$tiddoc = $objClientesDAO->getTipo_Documento();
+			$listciu = $objClientesDAO->getCity('');
+			$smarty = new Smarty;
+			$smarty->setTemplateDir("templates");
+			$smarty->assign('tipdoc',$tiddoc);
+			$smarty->assign('listciu',$listciu);
+			$smarty->display('vtnCrearcliente.tpl');
+		break;
+		case 'VTNCOMPRAS':
+			$_REQUEST['document'] = (isset($_REQUEST['document'])) ? $_REQUEST['document'] : "";
+			$listacli = $objClientesDAO->getCustomer($_REQUEST['document']);
+			$liscompras = $objClientesDAO->getShopping($listacli[0]['customer_id']);
+			$smarty = new Smarty;
+			$smarty->setTemplateDir("templates");
+			$smarty->assign('documentcli',$_REQUEST['document']);
+			$smarty->assign('rep',$liscompras);
+			$smarty->display('vtncompras.tpl');
+		break;
+		case 'VTNDELETECLI':
+			$_REQUEST['document'] = (isset($_REQUEST['document'])) ? $_REQUEST['document'] : "";
+			$smarty = new Smarty;
+			$smarty->setTemplateDir("templates");
+			$smarty->assign('documentcli',$_REQUEST['document']);
+			$smarty->display('vtndeletecliente.tpl');
+		break;
+		case 'VTNUSUCLIEN':
+			$_REQUEST['document'] = (isset($_REQUEST['document'])) ? $_REQUEST['document'] : "";
+			$smarty = new Smarty;
+			$smarty->setTemplateDir("templates");
+			$smarty->assign('documentcli',$_REQUEST['document']);
+			$smarty->display('vtnusuclient.tpl');
+		break;
+		case 'VTNUSU':
+			$smarty = new Smarty;
+			$smarty->setTemplateDir("templates");
+			$smarty->display('vtnusu.tpl');
+		break;
 	}
 	
 } else {
@@ -57,6 +117,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 		$usuario = $_SESSION['USUARIO'];
 		$smarty = new Smarty;
 		$smarty->setTemplateDir("templates");
+		$smarty->assign('usuario',$_SESSION['USUARIO']);
+		$smarty->assign('nombre',$_SESSION['NOMUSU']);
 		$smarty->display('index.tpl');
 	}
 }

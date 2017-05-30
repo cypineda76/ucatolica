@@ -67,12 +67,12 @@ switch ($_SERVER['REQUEST_METHOD']) {
 		echo json_encode($msn);
 	break;
 	case 'DELETE': //Borrar
-		$_REQUEST['document'] = (isset($_REQUEST['document'])) ? $_REQUEST['document'] : "";
 		if(!isset($_REQUEST['document'])){
 			$msn = array('val'=>406, 'msn'=>'Error! No hay parametros');
 			die( json_encode( $msn ) );
 		}
 		$DB->Execute( "begin work;" );
+		$_REQUEST['document'] = (isset($_REQUEST['document'])) ? $_REQUEST['document'] : "";
 		$borrar = $objClientesDAO->deleteCustomer($_REQUEST['document']);
 		if($borrar <=0){
 			$DB->Execute( "rollback work;" );
